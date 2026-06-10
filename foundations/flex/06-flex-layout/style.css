@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Added a vertical flex layout so the whole page stacks from top to bottom. */
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
   width: 600px;
 }
 
+/* Added padding to the buttons so they look more balanced and easier to read. */
 button {
   font-family: Roboto, sans-serif;
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +28,41 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* Added flexbox to center the logo, input, and buttons in the middle of the page. */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Added flexbox to place the links on the left and right sides of the header and footer. */
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+/* Added a light gray background to the footer to match the layout style. */
+.footer {
+  background: #eee;
+}
+
+/* Added flex display and spacing between the list items for the navigation links. */
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
 }
